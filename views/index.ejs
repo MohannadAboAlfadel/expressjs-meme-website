@@ -46,11 +46,15 @@
                             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                             <!-- Meme details -->
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Meme name -->
-                                    <h5 class="fw-bolder">Fancy Meme</h5>
-                                    <!-- Meme price -->
-                                    $40.00 - $80.00
+                               <div class="text-center">
+                                  <img src="<%= memes[0].imgURL %>" 
+                                       alt="<%= memes[0].name %>" 
+                                       class="img-fluid mb-3" 
+                                       style="max-width: 200px;">
+
+                                    <h5 class="fw-bolder"><%= memes[0].name %></h5>
+
+                                    <p><%= memes[0].price %></p>
                                 </div>
                             </div>
                             <!-- Meme actions -->
