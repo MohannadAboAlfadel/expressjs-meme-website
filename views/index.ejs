@@ -39,7 +39,8 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <!-- This will be your HTML Meme template that you will use to dynamically render all Memes -->
+                    <!-- Render all memes dynamically -->
+                    <% memes.forEach(function(meme) { %>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Meme image -->
@@ -47,24 +48,14 @@
                             <!-- Meme details -->
                             <div class="card-body p-4">
                                <div class="text-center">
-                                  <img src="<%= memes[0].imgURL %>" 
-                                       alt="<%= memes[0].name %>" 
+                                  <img src="<%= meme.imgURL %>" 
+                                       alt="<%= meme.name %>" 
                                        class="img-fluid mb-3" 
                                        style="max-width: 200px;">
 
-                                    <h5 class="fw-bolder"><%= memes[0].name %></h5>
+                                    <h5 class="fw-bolder"><%= meme.name %></h5>
 
-                                    <p><%= memes[0].price %></p>
-                                </div>
-                                <div class="text-center">
-                                  <img src="<%= memes[1].imgURL %>" 
-                                       alt="<%= memes[1].name %>" 
-                                       class="img-fluid mb-3" 
-                                       style="max-width: 200px;">
-
-                                    <h5 class="fw-bolder"><%= memes[1].name %></h5>
-
-                                    <p><%= memes[1].price %></p>
+                                    <p><%= meme.price %></p>
                                 </div>
                             </div>
                             <!-- Meme actions -->
@@ -73,6 +64,7 @@
                             </div>
                         </div>
                     </div>
+                    <% }) %>
                 </div>
             </div>
         </section>
